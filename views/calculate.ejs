@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="left">
+        <div class="caculatePage">
+            <% if(name){%>
+                <h2>Name: <%- name %></h2>
+            <%}%>
+            <% if(salary){ %>
+                <p>Total salary: <%- salary %>.00 Rs</p>
+            <%}%>
+        </div>
+        <div class="expanseTotalAmount">
+            <table>
+                <tr>
+                    <td>Total Expanse</td>
+                    <td><span id="totalExpanseAmount">0.00</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="totalAmountAfterExpanse">
+            <table>
+                <tr>
+                    <td>Total Saved Money .$</td>
+                    <td><span id="savedMoney"><%- salary %>.00</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="addExpanseList">
+        <div class="expanseRow">
+            <h2>Expanse Detail</h2>
+            <table id="expanse">
+                <tr>
+                    <th>Expanse Name</th>
+                    <th>Expanse Amount</th>
+                    <th>Remove Expense</th>
+                </tr>
+            </table>
+        </div>
+        <div class="error">
+            
+        </div>
+        <h4>Add Expanse</h4>
+        <div class="input">
+            <label for="expanseName">Expanse name</label>
+            <input type="text" name="expanseName" id="expanseName" placeholder="enter expense name here....">
+        </div>
+        <div class="input">
+            <label for="expanseAmount">Expanse Amount</label>
+            <input type="number" name="expanseAmount" id="expanseAmount" placeholder="enter expense amount here....">   
+        </div>
+        <div class="btn">
+            <button onclick="addExpanseRow()">Add</button>
+        </div>
+    </div>
+    
+
+    
+</div>

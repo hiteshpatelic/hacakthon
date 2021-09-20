@@ -1,0 +1,11 @@
+.container{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    align-items: center;
+}
+.left{
+    grid-column:  1 / 2;
+}
+.addExpanseList{
+    grid-column: 2 / -1;
+}
