@@ -34,7 +34,9 @@ function addExpanseRow(){
 }
 
 function deleteRow(e){
-    totalExpanseAmount.innerHTML = Number(totalExpanseAmount.innerHTML) -Number(e.target.previousSibling.innerHTML)
-    saveMoney.innerHTML = Number(saveMoney.innerHTML) + Number(e.target.previousSibling.innerHTML)
-    e.target.parentNode.remove()
+    // console.log(e);
+    const event = e.target.parentNode.previousSibling.innerHTML
+    totalExpanseAmount.innerHTML = Number(totalExpanseAmount.innerHTML) -Number(event)
+    saveMoney.innerHTML = Number(saveMoney.innerHTML) + Number(event)
+    e.target.parentNode.parentNode.remove()
 }
